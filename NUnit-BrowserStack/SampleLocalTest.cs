@@ -13,8 +13,8 @@ namespace BrowserStack
     [Test]
     public void BStackTunnelCheck()
     {
-      driver.Navigate().GoToUrl("http://bs-local.com:45454/");
-      StringAssert.Contains("BrowserStack Local", driver.Title);
+      driver.Navigate().GoToUrl("https://www.bentley.com/");
+      StringAssert.Contains("Home | Bentley | Infrastructure Engineering Software", driver.Title);
     }
   }
 }

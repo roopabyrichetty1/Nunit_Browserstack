@@ -26,7 +26,7 @@ namespace BrowserStack
 
       capability.AddAdditionalOption("bstack:options", capability);
       driver = new RemoteWebDriver(
-        new Uri("http://localhost:4444/wd/hub/"),
+        new Uri("https://www.bentley.com"),
         capability
       );
     }
