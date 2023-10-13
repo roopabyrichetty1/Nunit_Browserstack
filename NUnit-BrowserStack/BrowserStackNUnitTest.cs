@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
@@ -25,13 +26,12 @@ namespace BrowserStack
       capability.BrowserVersion = "latest";
 
       capability.AddAdditionalOption("bstack:options", capability);
-      driver = new RemoteWebDriver(
-        new Uri("https://www.bentley.com"),
-        capability
-      );
-    }
+      //driver = new RemoteWebDriver(new Uri("https://www.bentley.com"), capability      );
+            IWebDriver driver = new RemoteWebDriver(new Uri("https://www.bentley.com"), new ChromeOptions());
 
-    [TearDown]
+        }
+
+        [TearDown]
     public void Cleanup()
     {
       driver.Quit();
